@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myApp/static/style/style.css' %}">
+    <title>Selenium Selection</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Selenium Forms</a>
+    </nav>
+    <div class="container">
+        <div class="list-group mt-5">
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#collapseExample" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.amazon.com" class="mr-3 img-fluid"> 
+                        Amazon 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="collapseExample">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="email" name="user" placeholder="Email" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#aInstance" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.aws.amazon.com" class="mr-3 img-fluid"> 
+                        Amazon Instances
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="aInstance">
+                    <div class="d-flex justify-content-center">
+                        <a data-toggle="collapse" href="#mern" class="d-inline mr-5 btn btn-primary mb-4">MERN</a>
+                        <a data-toggle="collapse" href="#c" class="d-inline mr-5 btn btn-primary mb-4">C#</a>
+                        <a data-toggle="collapse" href="#python" class="d-inline mb-4 btn btn-primary">Python</a>
+                    </div>
+                </div>
+                <div class="collapse multi-collapse" id="mern">
+                    <form action="/mernInstance" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mt-2 mr-3">
+                                <h4>AWS Sign In</h4>
+                            </div>
+                            <div class="mr-3">
+                                <input type="email" name="user" placeholder="Email" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="text" name="instanceName" placeholder="Instance Name" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="collapse multi-collapse" id="c">
+                    <form action="/ainstance" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mt-2 mr-3">
+                                <h4>AWS Sign In</h4>
+                            </div>
+                            <div class="mr-3">
+                                <input type="email" name="user" placeholder="Email" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="text" name="instanceName" placeholder="Instance Name" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="collapse multi-collapse" id="python">
+                    <form action="/" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mt-2 mr-3">
+                                <h4>AWS Sign In</h4>
+                            </div>
+                            <div class="mr-3">
+                                <input type="email" name="user" placeholder="Email" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="text" name="instanceName" placeholder="Instance Name" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#clickUp" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.clickup.com" class="mr-3 img-fluid"> 
+                        ClickUp
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="clickUp">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#codingDojo" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.codingdojo.com" class="mr-3 img-fluid"> 
+                        Coding Dojo 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="codingDojo">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#discord" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.discord.com" class="mr-3 img-fluid"> 
+                        Discord 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="discord">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#discover" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.discover.com" class="mr-3 img-fluid"> 
+                        Discover 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="discover">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#ezPass" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.ezpassva.com" class="mr-3 img-fluid"> 
+                        EzPass 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="ezPass">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#facebook" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.facebook.com" class="mr-3 img-fluid"> 
+                        FaceBook
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="facebook">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#hired" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.hired.com" class="mr-3 img-fluid"> 
+                        Hired
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="hired">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#hulu" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.hulu.com" class="mr-3 img-fluid"> 
+                        Hulu 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="hulu">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#linkedIn" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.linkedin.com" class="mr-3 img-fluid"> 
+                        LinkedIn 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="linkedIn">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#netflix" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.netflix.com" class="mr-3 img-fluid"> 
+                        Netflix 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="netflix">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#vwCredit" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.vwcredit.com" class="mr-3 img-fluid"> 
+                        VW Credit 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="vwCredit">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#wellsFargo" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.wellsfargo.com" class="mr-3 img-fluid"> 
+                        Wells Fargo 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="wellsFargo">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a data-toggle="collapse" href="#wmata" class="list-group-item list-group-item-action rounded border border-primary"><img src="https://www.google.com/s2/favicons?domain=www.wmata.com" class="mr-3 img-fluid"> 
+                        WMATA 
+                    </a>
+                    <br>
+                </div>
+                <div class="collapse" id="wmata">
+                    <form action="/amazon" method="POST">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="mr-3">
+                                <input type="text" name="user" placeholder="Username" class="form-control form-control-lg">
+                            </div>
+                            <div class="mr-3">
+                                <input type="password" name="pword" placeholder="Password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mt-2">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
